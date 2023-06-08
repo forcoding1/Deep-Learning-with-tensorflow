@@ -2,6 +2,8 @@ from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_sc
 
 def results(y_true, y_pred):
   """Takes true and predicted values and gives 4 evaluation metrics"""
+  
+  model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="weighted")
   accuracy_0 = accuracy_score(y_true, y_pred)
   f1_score_0 = f1_score(y_true, y_pred)
   recall_0 = recall_score(y_true, y_pred)
