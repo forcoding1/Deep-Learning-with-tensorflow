@@ -1,4 +1,4 @@
-from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 def results(y_true, y_pred):
   """Takes true and predicted values and gives 4 evaluation metrics"""
